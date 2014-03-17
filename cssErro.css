@@ -1,0 +1,140 @@
+body{margin: 0px;padding: 0px;background: #fcf5f5;font: 13px Arial, Helvetica, sans-serif;color: #660000}
+h1,h2,h3{margin-top: 0px}
+h1{font-size: 2.4em}
+h2{font-size: 1.8em}
+h3{font-size: 1.4em}
+p,ol,ul{margin-bottom: 1.8em;line-height: 160%}
+a{color: #a32626}
+a:hover{text-decoration: none;color: #FF0000}
+a img{border: none}
+#header{width: auto;height: 100px;margin: 0px auto}
+#header a{text-decoration: none;color: #FFFFFF}
+#logo{float: left}
+#logo h1,#logo p{margin: 0px;line-height: normal;font-weight: normal;color: #FFFFFF}
+#logo h1{padding: 25px 0px 0px 0px}
+#menu{float: right}
+#menu ul{margin: 0px;padding: 49px 0px 0px 0px;list-style: none;line-height: normal}
+#menu li {
+	float: left;
+	margin: 0px 0px 0px 1px;
+}
+
+#menu a {
+	display: block;
+	width: 100px;
+	height: 28px;
+	padding: 12px 20px 0px 20px;
+}
+
+#menu a:hover {
+	text-decoration: underline;
+}
+
+#menu .active {
+	background: #a32626 url(imagens/img02.gif) no-repeat 0px 0px;
+}
+
+#menu .active a {
+	background: url(imagens/img02.gif) no-repeat 100% -40px;
+}
+
+/* Page */
+
+#page {
+	width: auto;
+	margin: 0px auto;
+	padding: 30px 0px;
+}
+
+/* Content */
+
+#content {
+	float: right;
+	width: auto;
+}
+
+.post {
+	margin: 0px 0px 30px 0px;
+}
+
+.post .title {
+	margin: 0px;
+	padding: 0px 0px 5px 0px;
+	border-bottom: 1px solid #c49090;
+}
+
+.post .entry {
+}
+
+.post .meta {
+	font-weight: bold;
+}
+
+.post .byline {
+	margin: 0px;
+}
+
+/* Sidebar */
+
+#sidebar {
+	float: left;
+	width: auto;
+	background: url(imagens/img03.gif) repeat-y left top;
+}
+
+#sidebar-bgtop {
+	height: 3px;
+	background: url(imagens/img04.gif) no-repeat left top;
+}
+
+#sidebar-bgbtm {
+	height: 3px;
+	background: url(imagens/img05.gif) no-repeat left bottom;
+}
+
+#sidebar-content {
+	padding: 20px;
+}
+
+#sidebar ul {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+#sidebar li ul {
+	margin-bottom: 1.8em;
+	list-style: inside disc;
+}
+
+#sidebar h2 {
+	font-size: 1.4em;
+}
+
+#sidebar a {
+	text-decoration: none;
+}
+
+#sidebar a:hover {
+	text-decoration: underline;
+}
+
+/* Footer */
+
+#footer {
+	clear: both;
+	color: #FFFFFF;
+	height: 50px; margin: 0px auto;
+	position: absolute; bottom: 0px; width: 100%;
+	background: #c23939 url(imagens/img06.gif) repeat;
+}
+
+#footer p {
+	text-align: center;
+	line-height: normal;
+	font-size: smaller;
+}
+
+#footer a {
+	color: #FFFFFF;
+}
