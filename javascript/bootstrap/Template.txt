@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+	<title>TITULO</title>
+	<meta charset="iso-8859-1">
+
+	<link rel="stylesheet" type="text/css" href="../javascript/bootstrap/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../javascript/bootstrap/stylesheets/locastyle.css">
+	<link rel="stylesheet" type="text/css" href="../javascript/bootstrap/stylesheets/vegomstyle.css">
+
+	<script type="text/javascript" src="../javascript/bootstrap/javascripts/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="../javascript/bootstrap/javascripts/locastyle.js"></script>
+	<script type="text/javascript" src="../javascript/bootstrap/bootstrap/js/bootstrap.js"></script>
+
+
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+		<![endif]-->
+
+	<script language="javascript" src="../ssfuncoes.js"></script>
+	<script language="javascript">
+	
+	function consultar(param){
+	
+					var DT1 = $("#DT1").val();
+					var DT2 = $("#DT2").val();
+					if(DT1 == "" || DT2 == ""){
+						alert("É necessário preencher o Período de Emissão !");
+						return false;
+					}
+	
+					var STR = DT1+"^"+DT2;
+	
+					if(param == 0){ // lista no iframe local.
+						$("#consulta").attr("src","fiwconfenttitlist.csp?PARAM="+STR);
+						
+					}
+				}
+				
+				window.onload = function(){
+					$('.date').datepicker();
+				}
+	
+	</script>
+
+
+</head>
+ <script language="cache" runat="server">S NDSIS=%session.Get("NDSIS")</script>
+
+<body onLoad="expira(#(%session.Get("EMP"))#);" class="main">
+
+<div id="loading" style="position:absolute; left:50%; top:40%; width:32px; height:18px; z-index:1;display:none">
+	<img src="../ajax-loader.gif">
+</div>
+
+	<script language="cache" runat="server">
+	 d topoPag^SSWUTILS("LIBERAR TÍTULOS",%request.PageName)
+	</script> 
+
+	<div class="container">
+
+		<form class="form-inline clearfix" role="form">
+			<div class="row linha110">
+				<div class="form-group col-xs-4">
+					<label for="DT1" class="col-xs-3 text-right">De: </label>
+					<div class="input-group datepicker">
+						<input type="text" class="form-control date-mask" id="DT1" name="DT1" value="#($ZDT(%session.Get("NDSIS")-10,4))#">
+					</div>
+				</div>
+				<div class="form-group col-xs-4">
+					<label for="DT2" class="col-xs-3 text-right">Até: </label>
+					<div class="input-group datepicker">
+						<input type="text" class="form-control date-mask" id="DT2" name="DT2" value="#($$^%Zstd(NDSIS))#">
+					</div>
+				</div>
+
+				<div class="form-group col-xs-4">
+					<button type="button" class="btn btn-success" onClick="consultar(0)">Consultar</button>
+					<button type="button" class="btn btn-warning" style="float:right" onClick="consulta.grava()">Efetivar</button>
+				</div>
+
+			</div>
+		</form>
+		<div class="row">
+		  <div class="col-xs-12 col-md-offset-1" style="padding:4px">
+				<div class="small" style="width:25%;background:#DDFFDD;padding:4px;float:left">Aprovada</div>
+				<div class="small" style="width:25%;background:#FFFFDD;padding:4px;float:left">Aprovada com Restri&ccedil;&atilde;o</div>
+				<div class="small" style="width:25%;background:#FFDDDD;padding:4px;float:left">Rejeitada</div>  
+		  </div>
+		</div>
+  	<center>
+	  <table width="96%" border="0" cellspacing="0" cellpadding="0" class="clearfix" align="center" style="margin-top:4px">
+		<tr bgcolor="#CCCCCC">
+		  <td valign="top" height="10"></td>
+		  <td></td>
+		</tr>
+		<tr> 
+		  <td colspan="2"> <iframe align="center" frameborder="0" height="310" width="100%" src="" id="consulta" name="consulta" scrolling="yes"></iframe> 
+		  </td>
+		</tr>
+		<tr bgcolor="#CCCCCC">
+		  <td valign="top" height="10"></td>
+		  <td></td>
+		</tr>
+	  </table>
+	</center>
+</div>
+</body>
+</html>

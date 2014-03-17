@@ -1,0 +1,57 @@
+h3{margin:0;padding:0}
+
+.row{
+	width:100%
+}
+
+.lblCampos{float: left;padding-left: 1px;text-align: right;width: 90px}
+
+#topo{width: 98%;border-bottom: 2px double #990000;float:left;margin-bottom:30px;margin-top:4px}
+#topo h1, #topo h3{
+
+  font-family: 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  font-size: 16pt;
+  letter-spacing: 0.01em;
+  line-height: 16pt;
+  font-smooth: always;
+  color: rgba(0, 0, 0, 0.6);
+  text-indent: 10px;
+  float: left
+}
+#topo a {float: right;margin-bottom: 2px}
+#topo a img {border:0}
+
+.ttlPag{
+  font-family: 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  font-size: 16pt;
+  letter-spacing: 0.01em;
+  line-height: 16pt;
+  font-smooth: always;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 16pt;
+  line-height: 4px;
+  text-indent: 10px
+}
+
+.linha110{width:100%; float:left;margin-top: 2px}
+.linha100{width:90%; float:left;margin-top: 2px}
+.linha90{width:90%; float:left;margin-top: 2px}
+.linha85{width:85%; float:left;margin-top: 2px}
+.linha80{width:80%; float:left;margin-top: 2px}
+.linha75{width:75%; float:left;margin-top: 2px}
+.linha70{width:70%; float:left;margin-top: 2px}
+.linha65{width:65%; float:left;margin-top: 2px}
+.linha60{width:60%; float:left;margin-top: 2px}
+.linha55{width:55%; float:left;margin-top: 2px}
+.linha50{width:50%; float:left;margin-top: 2px}
+.linha45{width:45%; float:left;margin-top: 2px}
+.linha40{width:40%; float:left;margin-top: 2px}
+.linha35{width:35%; float:left;margin-top: 2px}
+.linha30{width:30%; float:left;margin-top: 2px}
+.linha25{width:25%; float:left;margin-top: 2px}
+.linha20{width:20%; float:left;margin-top: 2px}
+.linha15{width:15%; float:left;margin-top: 2px}
+.linha10{width:10%; float:left;margin-top: 2px}
+.linha{width:auto; float:left;margin-top: 2px}

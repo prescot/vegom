@@ -1,0 +1,41 @@
+# Padrão Bootstrap Locaweb:
+http://locaweb.github.io/locawebstyle/manual/introducao/como-usar/
+
+-----------------------------------------------------------------------------------------------------------------------------
+GRID:
+Sistemas de grid são usados para criar layouts em páginas com colunas e linhas que trabalham de forma responsiva. 
+Veja como ele funciona:
+
+Possuímos um sistema de grid de 12 colunas baseado no Bootstrap, mantendo seus breakpoints (1200px, 992px, 768px e 480px).
+
+- Linhas (.row), devem ser adicionadas dentro de um .container, para manter os espaçamentos e alinhamentos.
+- Use as linhas para criar grupos horizontais de colunas.
+- Conteúdos devem ser colocados dentro de colunas e as colunas só devem ser filhos imediatos de linhas.
+-----------------------------------------------------------------------------------------------------------------------------
+
+# Campos de Formulário consultar:
+http://locaweb.github.io/locawebstyle/manual/formularios/campos/
+
+#Máscaras nos Formulários:
+http://locaweb.github.io/locawebstyle/manual/formularios/mascaras-forms/
+
+Documento HTML
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>TITULO</title>
+	<meta charset="iso-8859-1">
+
+
+	<!-- Isso é necessário para funcionar a versão mobile -->
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<link rel="stylesheet" type="text/css" href="../javascript/bootstrap/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../javascript/bootstrap/stylesheets/locastyle.css">
+
+	<!-- Atente-se para a ordem: primeiro jquery, depois locastyle, depois o JS do Bootstrap. -->
+	<script type="text/javascript" src="../javascript/bootstrap/javascripts/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="../javascript/bootstrap/javascripts/locastyle.js"></script>
+	<script type="text/javascript" src="../javascript/bootstrap/bootstrap/js/bootstrap.min.js"></script>
